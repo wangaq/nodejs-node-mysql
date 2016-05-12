@@ -23,7 +23,7 @@ var sqls = {
 
 var tasks = ['insertSQL','selectSQL','deleteSQL','updateSQL']
 
-//async 并行执行
+//async 串行执行，一个函数数组中的每个函数，每一个函数执行完成之后才能执行下一个函数
 async.eachSeries(tasks,function(item,callback) {
     console.log('item : ' + sqls[item]);
     conn.query(sqls[item], function(err,res) {
