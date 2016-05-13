@@ -33,9 +33,3 @@ async.eachSeries(tasks,function(item,callback) {
 }, function(err) {
     console.log('err : ' + err);
 });
-
-/*conn.query(selectSQL,function(err,info) {
-    if(err) console.log('错误：%s',err);
-    console.log('sql result ==>');
-    console.log(info);
-});*/
